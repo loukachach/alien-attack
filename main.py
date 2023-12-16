@@ -1,3 +1,6 @@
+#!/usr/bin/python
+
+
 import pygame
 import random
 
