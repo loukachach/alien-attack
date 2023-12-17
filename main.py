@@ -24,7 +24,7 @@ PROJECTILE_VELOCITY = 7  # Adjusted for slower projectile speed
 PROJECTILE_WIDTH = 10
 PROJECTILE_HEIGHT = 5
 ENEMY_HEALTH = 1
-ENEMY_SPAWN_INTERVAL = 5000  # in milliseconds
+ENEMY_SPAWN_INTERVAL = 2000  # in milliseconds
 POINTS_PER_KILL = 10
 PLAYER_LIFE_POINTS = 3
 
@@ -94,6 +94,13 @@ def main_menu():
         draw_button(screen, play_button_rect, "Play", play_button_rect.collidepoint(pygame.mouse.get_pos()))
 
         pygame.display.update()
+
+        # credits button
+        credits_button_rect = pygame.Rect(SCREEN_WIDTH // 2 - BUTTON_WIDTH // 2, 400, BUTTON_WIDTH, BUTTON_HEIGHT)
+        draw_button(screen, credits_button_rect, "credits", credits_button_rect.collidepoint(pygame.mouse.get_pos()))
+
+        pygame.display.update()
+
 
 # Function to draw a button on the screen
 def draw_button(screen, button_rect, button_text, is_hovered):
