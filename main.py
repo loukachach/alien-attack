@@ -88,18 +88,12 @@ def main_menu():
                     enemies = []
                     enemy_spawn_time = pygame.time.get_ticks() + ENEMY_SPAWN_INTERVAL
                     run_game()
-        
         # Play button
         play_button_rect = pygame.Rect(SCREEN_WIDTH // 2 - BUTTON_WIDTH // 2, 200, BUTTON_WIDTH, BUTTON_HEIGHT)
         draw_button(screen, play_button_rect, "Play", play_button_rect.collidepoint(pygame.mouse.get_pos()))
 
         pygame.display.update()
 
-        # credits button
-        credits_button_rect = pygame.Rect(SCREEN_WIDTH // 2 - BUTTON_WIDTH // 2, 400, BUTTON_WIDTH, BUTTON_HEIGHT)
-        draw_button(screen, credits_button_rect, "credits", credits_button_rect.collidepoint(pygame.mouse.get_pos()))
-
-        pygame.display.update()
 
 
 # Function to draw a button on the screen
